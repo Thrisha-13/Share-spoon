@@ -1,40 +1,43 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="homepage.css">
     <link rel="icon" type="images/logo" href="/images/logo.png">
+    <title>Share Spoon</title>
   </head>
-  <body >
+  <body>
+      <header class="header scrolled" id="header">
+        <div class="left-section">
+          <img class="logo" src="images/logo.png">
+        </div>
+        <nav class="right-section">
+            <a>HOME</a>
+            <a>MENU</a>
+            <a>RESERVATION</a>
+            <a>CONTACT US</a>
+        </nav>
+      </header>
+      
     <div class="container">
       <section class="section first-section" style="background: url(images/bg.png); background-repeat: no-repeat; background-size: 100% 100%; background-attachment: fixed;">
-        <div class="overlay">
-          <div class="header scrolled">
-            <div class="left-section">
-              <img class="logo" src="images/logo.png">
-            </div>
-            <div class="right-section">
-              <a>HOME</a>
-              <a>MENU</a>
-              <a>ORDER ONLINE</a>
-              <a>CONTACT US</a>
-            </div>
-          </div>
           <div class="body">
             <h3 class="desc">Savor the Spice, feel the Tradition</h3>
-            <pre class="descs">Welcome to Share spoon – A Tapestry of South Indian Flavors!
-               At Share spoon, we bring the soul-soothing flavors of South India to your table.
-                Indulge in a sensory journey where each dish tells a story of tradition, passion,
-                 and the rich culinary heritage of the region.</pre>
+            <p  class="descs">
+             Welcome to Share spoon – A Tapestry of South Indian Flavors!
+                At Share spoon, we bring the soul-soothing flavors of South India 
+                to your table. Indulge in a sensory journey where each dish tells a 
+                story of tradition, passion,and the rich culinary
+                 heritage of the region.
+            </p>
             <p class="button">
               <button class="book-table-button" >Book Table</button>
               <button class="view-menu-button">See our Menu</button>
             </p>
           </div>
-        </div>
-  
       </section>
-      <section class="section">
+      <section class="section ">
         <div class="about-us-page">
           <h2>About Us</h2>
           <p class="about-desc">Welcome to Share Spoon, where we celebrate the rich and diverse flavors of South Indian cuisine. Nestled in the heart of Tamil Nadu, our restaurant is a culinary oasis for those seeking authentic tastes and unforgettable dining experiences.</p>
@@ -47,30 +50,101 @@
             <button class="view-more-button">View more</button>
         </div>
       </section>
-      <section class="section" style="background: url(images/bg1.png);">
-        <div style="padding: 30px;"></div>
-        <h2>Customer feedback</h2>
-        <p style="color: white; font-size: 20px; text-align: center;">What our customer says ?</p>
-        <div class="feedbacks">
-          <div class="feedback">
-            <img  class="icon"  src="images/profile-icon.png">
-            <p>delicious! , Asusual Yummy</p>
+
+      <section class="section" style="background: url(images/bg1.png); background-repeat: no-repeat;
+          background-size: 100% 100%;
+          background-attachment: fixed;">
+        <div class="reservation-content">
+          <h1>Make a Reservation</h1>
+          <h6>To help us find the best table for you, select the preferred party size, date, and time of your reservation.</h6>
+          <div class="dataColection">
+              
+                <div class="get-data" >
+                  <form  autocomplete="on">
+                  <p><label for="cars" class="lable">party Size</label></p>
+                  <input list="size" name="size" placeholder="no of guests" >
+                  <datalist id="size">
+                    <option value="1 guest"></option>
+                    <option value="2 guests"></option>
+                    <option value="3 guests"></option>
+                    <option value="4 guests"></option>
+                    <option value="5 guests"></option>
+                    <option value="6 guests"></option>
+                  </datalist>
+                </form>
+                </div>
+
+                <div class="get-data" >
+                  <form  autocomplete="on">
+                    <p><label for="reservation-time" class="lable">Time</label></p>
+                    <input list="time-list" name="time" placeholder="Time" >
+                    <datalist id="time-list">
+                      <option value="8AM"></option>
+                      <option value="8:30AM"></option>
+                      <option value="9 AM"></option>
+                      <option value="9:30 AM"></option>
+                      <option value="10 AM"></option>
+                      <option value="10:30 AM"></option>
+                      <option value="11 AM"></option>
+                      <option value="11:30 AM"></option>
+                      <option value="12 AM"></option>
+                    </datalist>
+                  </form>
+                </div>
+
+                <div class="get-data" >
+                  <form  autocomplete="on">
+                    <p><label class="lable">Date</label></p>
+                    <input  class="time" id="date" type="date">
+                  </form>
+                </div>
+   
           </div>
+          <hr>
+          <p class="choose-time-slot">choose an available time slot</p>
+          <div class="time-slot">
+            <div class="slot"></div>
+            <div class="slot"></div>
+            <div class="slot"></div>
+            <div class="slot"></div>
+            <div class="slot"></div>
+
+            <div class="slot"></div>
+            <div class="slot"></div>
+            <div class="slot">8:00 AM</div>
+            <div class="slot">8:30 AM</div>
+            <div class="slot">9:00 AM</div>
+            <div class="slot">9:30 AM</div>
+            <div class="slot">10:00 AM</div>
+            <div class="slot">10:30 AM</div>
+            <div class="slot">11:00 AM</div>
+            <div class="slot">11:30 AM</div>
+          </div>
+          <p class="reservation-button-div" >
+            <button class="reservation-button" >Reserve now</button>
+          </p>
+          
+        
         </div>
-
-
+        
+        
       </section>
     </div>
 
-
-
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        window.addEventListener("scroll", function() {
-          var header = document.querySelector(".header");
-          header.classList.toggle("scrolled", window.scrollY > 0);
-        });
-      });
+      
+
+      window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    var scrollPosition = window.scrollY;
+
+    // You can adjust these values according to your preferences
+    if (scrollPosition > 100) {
+        header.style.backgroundColor = '#666'; // New background color
+    } else {
+        header.style.backgroundColor = '#333'; // Initial background color
+    }
+});
     </script>
    
   </body>
