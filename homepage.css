@@ -4,8 +4,8 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.header{
-  position: fixed;
+#header{
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -15,22 +15,15 @@ body{
   padding: 10px 20px;
   width: 100%;
   flex:1 2 ;
-}
-#header {
-  background-color: rgb(174, 154, 100); /* Initial background color */
-  transition: background-color 0.3s ease; /* Smooth transition effect */
-  height: 70px; /* Adjust this according to your header height */
-}
-.header.scrolled {
- /* background-color: rgba(0, 0, 0, 0.8);*/
-  transition: background-color 0.3s ease; 
+  background-color: rgb(224, 134, 74);
+  height: 10%;
 }
 .left-section{
   display: flex;
   margin-right: 50px;
 }
 .logo{
-  width: 150px;
+  width: 250px;
 }
 .right-section{
   display: flex;
@@ -44,13 +37,16 @@ a{
   font-weight: 20px;
   letter-spacing: 6px;
   margin-right: 15px;
+  text-decoration: none;
+}
+.current-page{
+  color: black;
 }
 .container {
-  height: 100vh;
-  overflow-y: auto; 
+  height: 100vh; 
 }
 a:active{
-  color:rgb(174, 154, 100); ;
+  color:rgb(0,0,0) ;
 }
 .body{
   display: flex;
@@ -59,7 +55,7 @@ a:active{
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 15% 20px;
+  padding: 8% 20px;
   margin: auto;
 }
 .first-section {
@@ -91,7 +87,7 @@ a:active{
 }
 .view-menu-button:hover,
 .book-table-button{
-  background-color:rgb(174, 154, 100);
+  background-color:rgb(224, 134, 74);
   color: white;
   border: none;
   padding: 15px 20px;
@@ -128,7 +124,7 @@ h2{
   justify-content: center;
   width: 100%;
   text-align: center;
-  color:rgb(174, 154, 100) ;
+  color:rgb(224, 134, 74) ;
   font-size: 35px;
 }
 .about-desc{
@@ -137,7 +133,7 @@ h2{
   line-height: 40px;
 }
 .view-more-button{
-  background-color:rgb(174, 154, 100) ;
+  background-color:rgb(224, 134, 74) ;
   border: none;
   padding: 15px 20px;
   font-size: 15px;
@@ -150,7 +146,7 @@ h2{
   padding: 40px 15%;
 }
 h1{
-  color:rgb(174, 154, 100)  ;
+  color:rgb(224, 134, 74)  ;
   text-align: center;
   font-size: 40px;
 }
@@ -161,12 +157,13 @@ h6{
 }
 .dataColection{
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 30px;
 }
 .get-data{
   display: flex;
+  margin-bottom: 30px;
 }
 .lable{
   color: white;
@@ -203,23 +200,27 @@ font-size: 20px;
   margin-bottom: 20px;
   height: 20px;
   width: 100px;
+  cursor: pointer;
 }
-.slot:active{
-  border:1px solid rgb(174, 154, 100);
-  color:rgb(174, 154, 100) ;
+.is-toggled {
+  border:1px solid rgb(224, 134, 74);
+  color:rgb(224, 134, 74) ;
 }
 .reservation-button-div{
   display: flex;
   justify-content: center;
 }
 .reservation-button{
-  padding: 10px 20px;
-  background-color: rgb(174, 154, 100);
+  width: 130px;
+  padding: 10px 10px;
+  background-color: rgb(224, 134, 74);
   border: none;
   color: white;
 }
 .reservation-button:hover{
-  background-color: white;
+  background-color: rgba(224, 134, 74, 0.7);
 }
-
-
+.galleryImage{
+  width: 50px;
+  height: auto;
+}
