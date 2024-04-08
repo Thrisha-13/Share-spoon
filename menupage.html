@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="menupage.css">
+    <title>Share Spoon</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="left-section">
+        <img class="logo" src="images/logo.png">
+      </div>
+      <nav class="right-section">
+        <a class="home-nav" href="index.html">HOME</a>
+        <a class="menu-nav" href="menu.html">MENU</a>
+        <a class="reservation-nav" onclick="navigationToogle('.reservation-nav')">RESERVATION</a>
+        <a class="contact-nav">CONTACT US</a>
+      </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1>MENU</h1>
+      <div class="category">
+        <h2>STARTERS</h2>
+        <div>
+          <p class="dishName">Paneer Tikka</p>
+          <p class="dish-desc">Succulent cubes of paneer marinated in yogurt and aromatic spices, grilled to perfection and served with mint chutney.</p>
+        </div><hr>
+        <div>
+          <p class="dishName">Papdi Chaat</p>
+          <p class="dish-desc">Crisp papdis layered with chickpeas, potatoes, yogurt, and a medley of chutneys, garnished with sev and pomegranate seeds for a delightful crunch.</p>
+        </div><hr>
+      </div>
+
+      <div class="category">
+        <h2>Main course</h2>
+        <div>
+          <p class="dishName">Butter Chicken</p>
+          <p class="dish-desc">Tender pieces of chicken simmered in a rich and creamy tomato-based gravy, infused with butter and aromatic spices, served with fragrant basmati rice.</p>
+        </div><hr>
+        <div>
+          <p class="dishName">Palak Paneer</p>
+          <p class="dish-desc">Fresh spinach and paneer cooked in a creamy blend of spices, creating a luscious and nutritious dish that's a favorite among vegetarians.</p>
+        </div><hr>
+        <div>
+          <p class="dishName">Dal Makhani</p>
+          <p class="dish-desc">Slow-cooked black lentils simmered with butter, cream, and aromatic spices, resulting in a rich and velvety texture that pairs perfectly with steamed rice.</p>
+        </div><hr>
+      </div>
+
+      <div class="category">
+        <h2>Main course</h2>
+        <div>
+          <p class="dishName">Butter Chicken</p>
+          <p class="dish-desc">Tender pieces of chicken simmered in a rich and creamy tomato-based gravy, infused with butter and aromatic spices, served with fragrant basmati rice.</p>
+        </div><hr>
+        <div>
+          <p class="dishName">Palak Paneer</p>
+          <p class="dish-desc">Fresh spinach and paneer cooked in a creamy blend of spices, creating a luscious and nutritious dish that's a favorite among vegetarians.</p>
+        </div><hr>
+        <div>
+          <p class="dishName">Dal Makhani</p>
+          <p class="dish-desc">Slow-cooked black lentils simmered with butter, cream, and aromatic spices, resulting in a rich and velvety texture that pairs perfectly with steamed rice.</p>
+        </div><hr>
+      </div>
+
+      <div class="category">
+        <h2>Breads</h2>
+        <div>
+          <p class="dishName">Garlic Naan</p>
+          <p class="dish-desc">Soft and fluffy bread infused with garlic and brushed with butter, perfect for sopping up flavorful curries.</p>
+        </div><hr>
+        <div>
+          <p class="dishName">Peshawari Naan</p>
+          <p class="dish-desc">Sweet and nutty naan bread filled with a delicious mixture of dried fruits, nuts, and aromatic spices, offering a delightful twist to traditional Indian bread.
+          </p>
+        </div><hr>
+      </div>
+
+      <div class="category">
+        <h2>Desserts</h2>
+        <div>
+          <p class="dishName">Gulab Jamun</p>
+          <p class="dish-desc">Soft and spongy milk dumplings soaked in a sweet syrup infused with cardamom and rose water, offering a decadent finale to your meal.</p>
+        </div><hr>
+        <div>
+          <p class="dishName">Kulfi</p>
+          <p class="dish-desc">Traditional Indian ice cream made with thickened milk, flavored with saffron, cardamom, and nuts, served on a stick for a refreshing and indulgent treat.</p>
+        </div><hr>
+        <div>
+          <p class="dishName">Rasgulla</p>
+          <p class="dish-desc">Delicate cottage cheese dumplings soaked in a light and fragrant sugar syrup, offering a light and refreshing end to your culinary journey.
+          </p>
+       </div><hr>
+      </div>
+
+      <div>
+        <h2>Beverages</h2>
+        <div>
+          <p class="dishName">Mango Lassi</p>
+          <p class="dish-desc">A creamy and refreshing yogurt-based drink blended with ripe mangoes and a hint of cardamom, offering a perfect balance of sweetness and tanginess.</p>
+        </div><hr>
+        <div>
+          <p class="dishName">Masala Chai</p>
+          <p class="dish-desc">Aromatic Indian tea brewed with a blend of spices such as cardamom, cinnamon, and cloves, simmered with milk and sugar for a comforting and flavorful experience.</p>
+        </div><hr>
+      </div>
+      
+    </div>
+    
+    
+    
+    
+    <script>
+      function moveToPage(selector){
+        if(selector === 'home-nav'){
+          document.querySelector('.home-nav').innerHTML = index.html;
+        }
+      }
+    </script>
+  </body>
+</html>
