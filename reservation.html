@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservation.css">
+    <link rel="icon" type="images/logo" href="images/logo.png">
+    <title>Share Spoon</title>
+  </head>
+  <body>
+    <header class="header scrolled" id="header">
+      <div class="left-section">
+        <img class="logo" src="images/logo.png">
+      </div>
+      <nav class="right-section">
+          <a class="home-nav" href="index.html">HOME</a>
+          <a class="menu-nav" href="menupage.html" onclick="navigationToogle('.menu-nav')">MENU</a>
+          <a class="reservation-nav current-page" href="reservation.html" onclick="navigationToogle('.reservation-nav')">RESERVATION</a>
+          <a class="contact-nav"href="menupage.html" >CONTACT US</a>
+      </nav>
+    </header>
+    <div class="reservation-content">
+      <h1>Make a Reservation</h1>
+      <h6>To help us find the best table for you, select the preferred party size, date, and time of your reservation.</h6>
+      <div class="dataColection">
+            <div class="get-data" >
+              <form  autocomplete="on">
+                <p><label for="cars" class="lable">party Size</label></p>
+                <input list="size" name="size" placeholder="no of guests" >
+                <datalist id="size">
+                  <option value="1 guest"></option>
+                  <option value="2 guests"></option>
+                  <option value="3 guests"></option>
+                  <option value="4 guests"></option>
+                  <option value="5 guests"></option>
+                  <option value="6 guests"></option>
+                </datalist>
+              </form>
+            </div>
+
+            <div class="get-data" >
+              <form  autocomplete="on">
+                <p><label for="reservation-time" class="lable">Time</label></p>
+                <input list="time-list" name="time" placeholder="Time" >
+                <datalist id="time-list">
+                  <option value="8AM"></option>
+                  <option value="8:30AM"></option>
+                  <option value="9 AM"></option>
+                  <option value="9:30 AM"></option>
+                  <option value="10 AM"></option>
+                  <option value="10:30 AM"></option>
+                  <option value="11 AM"></option>
+                  <option value="11:30 AM"></option>
+                  <option value="12 AM"></option>
+                </datalist>
+              </form>
+            </div>
+
+            <div class="get-data" >
+              <form  autocomplete="on">
+                <p><label class="lable">Date</label></p>
+                <input  class="time" id="date" type="date">
+              </form>
+            </div>
+
+      </div>
+      <hr>
+      <p class="choose-time-slot">choose an available time slot</p>
+      <div class="time-slot">
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot"></div>
+
+        <div class="slot"></div>
+        <div class="slot"></div>
+        <div class="slot js-button" onclick="
+          toggleButton('.js-button');">8:00 AM</div>
+        <div class="slot js-button2" onclick="
+          toggleButton('.js-button2');">8:30 AM</div>
+        <div class="slot js-button3" onclick="
+          toggleButton('.js-button3');">9:00 AM</div>
+        <div class="slot js-button4" onclick="
+          toggleButton('.js-button4');">9:30 AM</div>
+        <div class="slot js-button5" onclick="
+          toggleButton('.js-button5');">10:00 AM</div>
+        <div class="slot js-button6" onclick="
+          toggleButton('.js-button6');">10:30 AM</div>
+        <div class="slot js-button7" onclick="
+          toggleButton('.js-button7');">11:00 AM</div>
+        <div class="slot js-button8" onclick="
+          toggleButton('.js-button8');">11:30 AM</div>
+      </div>
+      <p class="reservation-button-div">
+        <input type="submit" value="Reserve Now" class="reservation-button" >
+      </p>
+    </div>
+
+
+
+    <script>
+      function toggleButton(selector) {
+        const button = document.querySelector(selector);
+        if (!button.classList.contains('is-toggled')) {
+
+          turnOffPreviousButton();
+
+          button.classList.add('is-toggled');
+        } else {
+          button.classList.remove('is-toggled');
+        }
+      }
+
+      function turnOffPreviousButton() {
+        const previousButton = document.querySelector('.is-toggled');
+        if (previousButton) {
+          previousButton.classList.remove('is-toggled');
+        }
+      }
+
+    </script>
+  </body>
+</html>
