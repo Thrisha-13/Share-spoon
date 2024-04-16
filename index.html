@@ -16,10 +16,15 @@
             <a class="home-nav" href="index.html">HOME</a>
             <a class="menu-nav" href="menupage.html" onclick="navigationToogle('.menu-nav')">MENU</a>
             <a class="reservation-nav" href="#reservation-section" onclick="navigationToogle('.reservation-nav')">RESERVATION</a>
-            <a class="contact-nav" >CONTACT US</a>
+            <a class="contact-nav" href="#contact">CONTACT US</a>
         </nav>
       </header>
-      
+      <div class="twitter-nav">
+        <a href="www.twitter.com"><img class="social-icon" src="images/twitter.webp"></a>
+      </div>
+      <div class="instagram-nav">
+        <a href="www.instagram.com"><img class="social-icon" src="images/insta.webp"></a>
+      </div>
     <div class="container">
       <section class="section first-section" style="background: url(images/bg.png); background-repeat: no-repeat; background-size: 100% 100%; background-attachment: scroll;">
           <div class="body">
@@ -32,7 +37,7 @@
                  heritage of the region.
             </p>
             <p class="button">
-              <button class="book-table-button"><a href="#reservation-section">Book Table</a></button>
+              <button class="book-table-button"><a href="reservation.html">Book Table</a></button>
               <button class="view-menu-button">See our Menu</button>
             </p>
           </div>
@@ -47,15 +52,40 @@
             <p class="about-desc">Our commitment to excellence extends beyond the kitchen. Our warm and inviting atmosphere, coupled with exceptional service, ensures that every visit to Share Spoon is not just a meal, but a journey through the vibrant landscapes of South India.</p>
             
             <p class="about-desc">Whether you're a connoisseur of South Indian cuisine or embarking on a culinary adventure, we invite you to join us at Share Spoon and experience the true essence of South Indian gastronomy.</p>
-            <button class="view-more-button">View more</button>
+            <!--<button class="view-more-button">View more</button>-->
         </div>
+      </section>
+
+      <section class="section"  style="background: url(images/bg5.jpg); background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-attachment: fixed;">
+      <h1>The Restaurant</h1>
+      <div class="aboutUs2" >
+        
+        <div class="restaurant-content">
+          <p class="points">01</p> <hr>
+          <p class="point">Traditional share spoon modern twist</p>
+          <p class="point-desc">Embark on a culinary journey blending South Indian heritage with modern twists. Experience the versatility of reimagined flavors, promising surprises in every bite.</p>
+        </div>
+        <div class="restaurant-content">
+          <p class="points">02</p> <hr>
+          <p class="point">Ingredients and Sourcing</p>
+          <p class="point-desc">We elevate South Indian cuisine with modern twists while prioritizing local, sustainable ingredients. Each dish is crafted with care, guaranteeing a celebration of flavor and authenticity in every bite.</p>
+        </div>
+        <div class="restaurant-content">
+          <p class="points">03</p> <hr>
+          <p class="point">Chef's Specialties</p>
+          <p class="point-desc">Meet our culinary team, led by our skilled head chef, blending experience and creativity in every dish. With innovation and tradition at heart, we craft visually stunning culinary masterpieces that are as delicious as they are inventive.</p>
+        </div>
+      </div>
+
       </section>
 
       <section class="section" id="reservation-section" style="background: url(images/bg1.png); background-repeat: no-repeat;
           background-size: 100% 100%;
           background-attachment: fixed;">
         <div class="reservation-content">
-          <h1>Make a Reservation</h1>
+          <h1 style="color: white;">Make a Reservation</h1>
           <h6>To help us find the best table for you, select the preferred party size, date, and time of your reservation.</h6>
           <div class="dataColection">
                 <div class="get-data" >
@@ -94,43 +124,36 @@
                 <div class="get-data" >
                   <form  autocomplete="on">
                     <p><label class="lable">Date</label></p>
-                    <input  class="time" id="date" type="date">
+                    <input  class="time" id="date" type="date" placeholder="Date">
                   </form>
                 </div>
    
           </div>
-          <hr>
-          <p class="choose-time-slot">choose an available time slot</p>
-          <div class="time-slot">
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot"></div>
-
-            <div class="slot"></div>
-            <div class="slot"></div>
-            <div class="slot js-button" onclick="
-              toggleButton('.js-button');">8:00 AM</div>
-            <div class="slot js-button2" onclick="
-              toggleButton('.js-button2');">8:30 AM</div>
-            <div class="slot js-button3" onclick="
-              toggleButton('.js-button3');">9:00 AM</div>
-            <div class="slot js-button4" onclick="
-              toggleButton('.js-button4');">9:30 AM</div>
-            <div class="slot js-button5" onclick="
-              toggleButton('.js-button5');">10:00 AM</div>
-            <div class="slot js-button6" onclick="
-              toggleButton('.js-button6');">10:30 AM</div>
-            <div class="slot js-button7" onclick="
-              toggleButton('.js-button7');">11:00 AM</div>
-            <div class="slot js-button8" onclick="
-              toggleButton('.js-button8');">11:30 AM</div>
-          </div>
-          <p class="reservation-button-div">
-            <input type="submit" value="Reserve Now" class="reservation-button" >
-          </p>
+          
+          <a class="reservation-button-div" href="reservation.html">
+            <button class="reservation-button" >Find a table</button>
+          </a>
         </div>
+      </section>
+
+      <section id="contact" class="section contact-sec" style="background: url(images/bg2.png); background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-attachment: fixed;
+      ">
+        <div><h1>Contact</h1></div>
+        <p style="color: white;">TELL US WHAT YOU THINK AND HOW WE ARE DOING</p>
+        <form class="Contact-form">
+          <div class="feedback">
+            <input type="text" placeholder="Name" class="feedback-Input" required> <br>
+            <input type="email" placeholder="E-mail" class="feedback-Input" required> <br>
+            <input type="tel" placeholder="Phone" class="feedback-Input" required> 
+          </div>
+          <textarea placeholder="type your message here"  ></textarea>
+        </form>
+        <button class="submit-button" onclick="feedback();">Submit</button>
+        <pre>500 Terry FrancINE St. San Francine, CA 94158 
+      Monday to Friday 12pm-11pm  / Saturday to Sunday 12pm-1am</pre>
+       
       </section>
 
       
@@ -179,6 +202,26 @@
           header.style.backgroundColor = 'rgba(0,0,0,0.8)'; // Initial background color
         }
       });*/
+
+
+      function feedback(){
+        const inputFields = document.querySelectorAll('.feedback-Input');
+        let isEmpty = false;
+
+        inputFields.forEach(function(inputField) {
+            if (inputField.value.trim() === '') {
+                isEmpty = true;
+                inputField.classList.add('invalid');
+            } else {
+                inputField.classList.remove('invalid');
+            }
+        });
+
+        // If any input field is empty, prevent form submission
+        if (isEmpty) {
+            return false;
+        }
+      }
     </script>
    
   </body>
