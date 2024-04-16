@@ -5,7 +5,7 @@ body{
 }
 
 #header{
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -16,7 +16,7 @@ body{
   width: 100%;
   flex:1 2 ;
   background-color: rgb(224, 134, 74);
-  height: 10%;
+  height: 12%;
 }
 .left-section{
   display: flex;
@@ -35,12 +35,25 @@ a{
   color: white;
   font-size: 20px;
   font-weight: 20px;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
   margin-right: 15px;
   text-decoration: none;
 }
 .current-page{
   color: black;
+}
+.twitter-nav{
+  right: 20px;
+  bottom: 300px;
+  position: fixed;
+}
+.social-icon{
+  background-color: transparent;
+}
+.instagram-nav{
+  right: 20px;
+  bottom: 250px;
+  position: fixed;
 }
 .container {
   height: 100vh; 
@@ -110,10 +123,13 @@ a:active{
 }
 .section {
   width: 100%;
-  padding: 20px;
+  padding: 50px;
   box-sizing: border-box;
   height:auto; 
+  min-height: 100%;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /*about us page*/
@@ -132,7 +148,7 @@ h2{
   font-size: 20px;
   line-height: 40px;
 }
-.view-more-button{
+/*.view-more-button{
   background-color:rgb(224, 134, 74) ;
   border: none;
   padding: 15px 20px;
@@ -141,14 +157,49 @@ h2{
 .view-more-button:hover{
   border-radius: 20px;
   transition: 0.3s;
+}*/
+
+/*aboutus2*/
+.aboutUs2{
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align: top;
+  padding: 50px ;
+}
+.restaurant-content{
+  width: 250px;
+}
+.points{
+  color: white;
+  font-size: 20px;
+}
+hr{
+  border:1px solid rgb(224, 134, 74) ;
+  width: 60px;
+}
+.point{
+  color:rgb(224, 134, 74);
+  font-size: 30px;
+  font-weight: bold;
+}
+.point-desc{
+  color: white;
+  font-size: 15px;
+  line-height: 25px;
 }
 .reservation-content{
   padding: 40px 15%;
+
 }
 h1{
   color:rgb(224, 134, 74)  ;
   text-align: center;
   font-size: 40px;
+  background-color: transparent;
 }
 h6{
   text-align: center;
@@ -160,9 +211,10 @@ h6{
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  column-gap: 25px;
 }
 .get-data{
-  display: flex;
+  flex :250px;
   margin-bottom: 30px;
 }
 .lable{
@@ -172,7 +224,7 @@ h6{
 #size,
 input{
   border-color: white;
-  background-color: transparent;
+  background-color: white;
   color-scheme: white;
   color: white;
   height: 50px;
@@ -213,6 +265,13 @@ font-size: 20px;
 .reservation-button{
   width: 130px;
   padding: 10px 10px;
+  background-color: rgba(00, 00, 00, 0.5);
+  border: none;
+  color: white;
+}
+.submit-button{
+  width: 130px;
+  padding: 10px 10px;
   background-color: rgb(224, 134, 74);
   border: none;
   color: white;
@@ -223,4 +282,48 @@ font-size: 20px;
 .galleryImage{
   width: 50px;
   height: auto;
+}
+.Contact-form{
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.feedback{
+  display: inline-block;
+  margin-right: 20px;
+}
+.feedback-Input{
+  margin-bottom: 22px;
+  border: ridge;
+  border-color:rgb(224, 134, 74) ;
+  background-color: transparent;
+  color-scheme: white;
+  color: black;
+  height: 40px;
+  width: 200px;
+  cursor: pointer;
+}
+textarea{
+  border: ridge;
+  border-color:rgb(224, 134, 74) ;
+  height: 180px;
+  width:200px ;
+  background-color: transparent;
+  color: white;
+}
+.invalid{
+  border: red;
+  margin-bottom: 20px;
+  border: ridge;
+  background-color: transparent;
+  color-scheme: white;
+  color: white;
+  height: 50px;
+  width: 200px;
+  cursor: pointer;
+}
+pre{
+  color:rgb(224, 134, 74) ;
+  font-size: 15px;
 }
