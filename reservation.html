@@ -24,9 +24,9 @@
       <h6>To help us find the best table for you, select the preferred party size, date, and time of your reservation.</h6>
       <div class="dataColection">
             <div class="get-data" >
-              <form  autocomplete="on">
+              <form id="reservationForm" autocomplete="on">
                 <p><label for="cars" class="lable">party Size</label></p>
-                <input list="size" name="size" placeholder="no of guests" >
+                <input id="partySize" list="size" name="size" placeholder="no of guests" required>
                 <datalist id="size">
                   <option value="1 guest"></option>
                   <option value="2 guests"></option>
@@ -41,7 +41,7 @@
             <div class="get-data" >
               <form  autocomplete="on">
                 <p><label for="reservation-time" class="lable">Time</label></p>
-                <input list="time-list" name="time" placeholder="Time" >
+                <input list="time-list" name="time" placeholder="Time" required >
                 <datalist id="time-list">
                   <option value="8AM"></option>
                   <option value="8:30AM"></option>
@@ -59,7 +59,7 @@
             <div class="get-data" >
               <form  autocomplete="on">
                 <p><label class="lable">Date</label></p>
-                <input  class="time" id="date" type="date">
+                <input  class="time" id="date" type="date" required>
               </form>
             </div>
 
@@ -93,13 +93,49 @@
           toggleButton('.js-button8');">11:30 AM</div>
       </div>
       <p class="reservation-button-div">
-        <input type="submit" value="Reserve Now" class="reservation-button" >
+        <input type="submit" value="Reserve Now" class="reservation-button" onclick="confirmation()" >
       </p>
     </div>
 
 
 
     <script>
+      function input(){
+        window.addEventListener('DOMContentLoaded', (event) => {
+        const reservationForm = document.getElementById('reservationForm');
+
+        reservationForm.addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent form submission
+
+          const partySizeInput = document.getElementById('partySize');
+          const timeInput = document.getElementById('time');
+          const dateInput = document.getElementById('date');
+
+          // Check if any input field is empty
+          if (partySizeInput.value.trim() === "" || timeInput.value.trim() === "" || dateInput.value.trim() === "") {
+            // Apply error class to empty inputs
+            if (partySizeInput.value.trim() === "") {
+              partySizeInput.classList.add('error');
+            }
+            if (timeInput.value.trim() === "") {
+              timeInput.classList.add('error');
+            }
+            if (dateInput.value.trim() === "") {
+              dateInput.classList.add('error');
+            }
+          } else {
+            // If all fields are filled, remove error class from all inputs
+            partySizeInput.classList.remove('error');
+            timeInput.classList.remove('error');
+            dateInput.classList.remove('error');
+            // You can submit the form here if needed
+            // reservationForm.submit();
+          }
+        });
+      });
+      }
+
+
       function toggleButton(selector) {
         const button = document.querySelector(selector);
         if (!button.classList.contains('is-toggled')) {
@@ -117,6 +153,11 @@
         if (previousButton) {
           previousButton.classList.remove('is-toggled');
         }
+      }
+
+      function confirmation(){
+        alert("your reservation has been confirmed");
+        window.location.href = 'index.html';
       }
 
     </script>
